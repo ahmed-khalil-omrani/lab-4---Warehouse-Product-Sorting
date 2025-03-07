@@ -1,16 +1,6 @@
 # 📌 Sorting Algorithms Exercise: Bubble Sort & Selection Sort
 
-## 📝 Objective
-In this exercise, you will implement and compare two fundamental sorting algorithms: **Bubble Sort** and **Selection Sort**. You will also measure their execution time to understand their efficiency on different dataset sizes.
 
-## 🏆 Learning Outcomes
-By completing this exercise, you will:
-- Understand the working principles of **Bubble Sort** and **Selection Sort**.
-- Implement sorting algorithms from scratch.
-- Compare the efficiency of sorting algorithms using execution time.
-- Apply sorting concepts to a real-world scenario.
-
----
 
 ## 📖 Scenario: Sorting Product Weights
 Imagine you are working for a logistics company that needs to **sort product weights** before shipping them. The warehouse receives products with different weights, and it is important to arrange them in **ascending order** before packaging.
@@ -50,19 +40,6 @@ Selection Sort works by repeatedly selecting the smallest element and moving it 
 
 ---
 
-## ⚡ Example Output
-```
-🔹 Small Dataset (50 product weights):
-✅ Bubble Sort took 0.000245 seconds.
-✅ Selection Sort took 0.000197 seconds.
-
-🔹 Large Dataset (1000 product weights):
-⚠️ Bubble Sort took 0.129456 seconds.
-✅ Selection Sort took 0.078943 seconds.
-🚀 Python Built-in Sort took 0.000032 seconds.
-```
-
----
 
 ## 🏁 Deliverables
 - Your implementation of **Bubble Sort** and **Selection Sort**.
@@ -70,11 +47,26 @@ Selection Sort works by repeatedly selecting the smallest element and moving it 
 - A short analysis of the results and conclusions.
 
 ---
+### 4️⃣ -------------------------------MY PART------------------------------------------
+## ⚡ Example Output
+```
+🔹 Small Dataset (50 elements):
+✅ Bubble Sort took 0.000000 seconds.
+✅ Selection Sort took 0.000000 seconds.
 
-## 📌 Tips
-- Focus on understanding the sorting logic before implementing it.
-- Use **comments** to explain each step in your code.
-- Compare the results carefully to draw meaningful conclusions.
-- Think about where these sorting algorithms might be useful in real-world applications.
+🔹 Large Dataset (1000 elements):
+⚠️ Bubble Sort took 0.007702 seconds.
+✅ Selection Sort took 0.035949 seconds.
+🚀 Python Built-in Sort took 0.000000 seconds.
+```
 
-Good luck and happy coding! 🚀
+---
+
+
+## 🚀 observation
+- we can see that the bublle sort and selection sort are near to each other
+- 
+- the build in python sort have less time omplexity
+- 
+
+Thank you for reading! 🚀

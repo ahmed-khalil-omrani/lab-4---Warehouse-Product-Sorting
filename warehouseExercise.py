@@ -1,6 +1,10 @@
 import time
 import random
-
+#swap function
+def swap(a,b):
+    temp=a
+    a=b
+    b=temp
 # 📌 Bubble Sort Implementation (To be completed by students)
 def bubble_sort(arr):
     """
@@ -8,7 +12,23 @@ def bubble_sort(arr):
     :param arr: List of numbers
     :return: Sorted list
     """
-    pass  # TODO: Implement Bubble Sort logic
+    n=len(arr)#take the length of the array
+    l=n#take the length of the array to change it later
+    e=0#varibale to count the number of swap
+    p=1#a varibale to count the number of pass
+    while(p<=n-1):#the code will run while the number of pass less then the length of table
+        for i in range(l-1):#pass from the first element to the last-2 element
+            if arr[i]>arr[i+1]:#compare each two succesive element
+                swap(arr[i],arr[i+1])#if the first element grater then the second wap them
+                e+=1#increase the number of swap
+        if e==0:#if the code didn't swap element the traitment end
+            return
+        else:
+            l-=1#decrease the number of element element in the next eteration
+        p+=1#increase the number of pass
+
+
+     # TODO: Implement Bubble Sort logic
 
 # 📌 Selection Sort Implementation (To be completed by students)
 def selection_sort(arr):
@@ -17,7 +37,15 @@ def selection_sort(arr):
     :param arr: List of numbers
     :return: Sorted list
     """
-    pass  # TODO: Implement Selection Sort logic
+    l=len(arr)#take the length of the array
+    for i in range(l-2):#itrate the table from the first element to the last -3
+        small=i#take the index of first element as the smallest
+        for j in range(i+1,l-1):#itrate the rest of array to ind the smallest one
+            if arr[j]<arr[small]:#compare the elemnt
+                small=j
+        if small!=j:
+            swap(arr[i],arr[small])#swap the elements first element with the smallest one
+      # TODO: Implement Selection Sort logic
 
 # 📌 Function to test sorting performance
 def test_sorting_performance():
@@ -42,6 +70,13 @@ def test_sorting_performance():
     selection_sort(selection_test)
     end_time = time.time()
     print(f"✅ Selection Sort took {end_time - start_time:.6f} seconds.")
+
+    # Python Built-in Sort
+    python_sort_test = small_dataset.copy()
+    start_time = time.time()
+    sorted(python_sort_test)
+    end_time = time.time()
+    print(f"🚀 Python Built-in Sort took {end_time - start_time:.6f} seconds.")
     
     print("\n🔹 Large Dataset (1000 elements):")
     
