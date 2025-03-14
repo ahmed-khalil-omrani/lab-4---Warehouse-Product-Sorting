@@ -47,6 +47,26 @@ def selection_sort(arr):
             swap(arr[i],arr[small])#swap the elements first element with the smallest one
       # TODO: Implement Selection Sort logic
 
+def insertion_sort(arr):
+    """
+    Selection Sort algorithm to sort a list in ascending order.
+    :param arr: List of numbers
+    :return: Sorted list
+    """
+    for j in range(len(arr)):#itrate all the array from the second element
+        key=arr[j]#take the first element in not sorted part
+        i=j-1#take the first index of the not sorted part
+        while i>0 and arr[i]>key:#itrate the sorted part to find the element location
+            arr[i+1]=arr[i]
+            i-=1
+        arr[i+1]=key
+    
+        
+
+
+
+
+
 # 📌 Function to test sorting performance
 def test_sorting_performance():
     """
@@ -54,7 +74,7 @@ def test_sorting_performance():
     """
     small_dataset = [random.uniform(1, 100) for _ in range(50)]
     large_dataset = [random.uniform(1, 100) for _ in range(1000)]
-    
+    solarge_dataset = [random.uniform(1, 100) for _ in range(20000)]
     print("\n🔹 Small Dataset (50 elements):")
     
     # Bubble Sort test
@@ -70,6 +90,12 @@ def test_sorting_performance():
     selection_sort(selection_test)
     end_time = time.time()
     print(f"✅ Selection Sort took {end_time - start_time:.6f} seconds.")
+    # Insetion Sort test
+    insertion_test = large_dataset.copy()
+    start_time = time.time()
+    insertion_sort(insertion_test)
+    end_time = time.time()
+    print(f"✅ Insetion Sort took {end_time - start_time:.6f} seconds.")
 
     # Python Built-in Sort
     python_sort_test = small_dataset.copy()
@@ -93,9 +119,46 @@ def test_sorting_performance():
     selection_sort(selection_test)
     end_time = time.time()
     print(f"✅ Selection Sort took {end_time - start_time:.6f} seconds.")
+
+    # Insetion Sort test
+    insertion_test = large_dataset.copy()
+    start_time = time.time()
+    insertion_sort(insertion_test)
+    end_time = time.time()
+    print(f"✅ Insetion Sort took {end_time - start_time:.6f} seconds.")
     
     # Python Built-in Sort
     python_sort_test = large_dataset.copy()
+    start_time = time.time()
+    sorted(python_sort_test)
+    end_time = time.time()
+    print(f"🚀 Python Built-in Sort took {end_time - start_time:.6f} seconds.")
+
+
+    print("\n🔹 solarge Dataset (10000 elements):")
+    
+    # Bubble Sort test
+    bubble_test = solarge_dataset.copy()
+    start_time = time.time()
+    bubble_sort(bubble_test)
+    end_time = time.time()
+    print(f"✅ Bubble Sort took {end_time - start_time:.6f} seconds.")
+    
+    # Selection Sort test
+    selection_test = solarge_dataset.copy()
+    start_time = time.time()
+    selection_sort(selection_test)
+    end_time = time.time()
+    print(f"✅ Selection Sort took {end_time - start_time:.6f} seconds.")
+    # Insetion Sort test
+    insertion_test = solarge_dataset.copy()
+    start_time = time.time()
+    insertion_sort(insertion_test)
+    end_time = time.time()
+    print(f"✅ Insetion Sort took {end_time - start_time:.6f} seconds.")
+
+    # Python Built-in Sort
+    python_sort_test = solarge_dataset.copy()
     start_time = time.time()
     sorted(python_sort_test)
     end_time = time.time()

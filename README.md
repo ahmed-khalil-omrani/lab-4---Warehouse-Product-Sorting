@@ -53,12 +53,20 @@ Selection Sort works by repeatedly selecting the smallest element and moving it 
 🔹 Small Dataset (50 elements):
 ✅ Bubble Sort took 0.000000 seconds.
 ✅ Selection Sort took 0.000000 seconds.
+✅ Insetion Sort took 0.047963 seconds.
+🚀 Python Built-in Sort took 0.000000 seconds.
 
 🔹 Large Dataset (1000 elements):
-⚠️ Bubble Sort took 0.007702 seconds.
-✅ Selection Sort took 0.035949 seconds.
+⚠️ Bubble Sort took 0.111151 seconds.
+✅ Selection Sort took 0.026874 seconds.
+✅ Insetion Sort took 0.025510 seconds.
 🚀 Python Built-in Sort took 0.000000 seconds.
-```
+
+🔹 solarge Dataset (10000 elements):
+✅ Bubble Sort took 6.873538 seconds.
+✅ Selection Sort took 2.196297 seconds.
+✅ Insetion Sort took 2.654933 seconds.
+🚀 Python Built-in Sort took 0.001432 seconds.
 
 ---
 
@@ -66,7 +74,7 @@ Selection Sort works by repeatedly selecting the smallest element and moving it 
 ## 🚀 observation
 - we can see that the bublle sort and selection sort are near to each other
 - 
-- the build in python sort have less time omplexity
-- 
+- the build in python sort have less time complexity
+- Selection sort < Insetion Sort < Bubble Sort in time complexity
 
 Thank you for reading! 🚀
